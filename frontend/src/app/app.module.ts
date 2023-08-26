@@ -7,6 +7,7 @@ import { AuthentComponent } from './authent/authent.component';
 import { MainComponent } from './main/main.component';
 import { SearchComponent } from './search/search.component';
 import { PlayerComponent } from './player/player.component';
+import { FallbackComponent } from './fallback/fallback.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PlayerComponent } from './player/player.component';
     AuthentComponent,
     MainComponent,
     SearchComponent,
-    PlayerComponent
+    PlayerComponent,
+    FallbackComponent
   ],
   imports: [
     BrowserModule,
