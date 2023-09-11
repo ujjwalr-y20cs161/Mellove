@@ -1,1 +1,45 @@
-<p>authent works!</p>
+<div class="auth-wrapper">
+    <div class="header flex-row align-center just-center">
+        <img id="logo" [src]= "logo" alt="logo">
+        <h1 class="header-title">{{title}}</h1>
+    </div>
+    
+    
+    <main class="flex-column align-center just-center">
+        <div class="text-wrapper child-pad5 mar10 flex-column align-center">
+            <h1>{{login}}</h1>
+            <h3>{{loginSub}}</h3>
+        </div>
+        
+        <form   class="form-wrapper flex-column align-center ">
+            <div class="input-wrapper flex-column just-space-around align-start child-pad10 child-wid20 child-border-10">
+                <label for="UserName">Email or Phone Number</label>
+                <input type="text" name="UserName" [placeholder]="uPlace" [(ngModel)]="uName">
+                <label for="Password">Password</label>
+                <input type="password" name="PassWord" [placeholder]="pPlace" [(ngModel)]="pass">
+
+
+                <div class="flex-row child-mar5 font-14"><input type="checkbox" name="terms" id="terms">
+                <label for="T&C">{{terms}}</label></div>
+
+            </div>
+            
+
+
+            <div class="login-btn-array flex-column just-center align-center child-mar10 child-border-10 child-wid20">
+                <button class=" btn-p-10-20 prim-btn-col" [disabled]="uName=='' && pass == '' " (click)="authent()">Log In</button>
+
+
+                <label class='font-14' for="sign-up">{{register}}</label>
+
+                <button class=" btn-p-10-20 sec-btn-col" [routerLink]="['/main']" (click)="signin()">Sign Up</button>
+            </div>
+            
+        </form>
+
+    
+    
+    </main>
+</div>
+
+

@@ -1,0 +1,31 @@
+.auth-wrapper>*{
+
+  font-family: 'Urbanist', monospace;
+
+}
+
+
+main{
+  margin: auto;
+}
+
+.header{
+  background: black;
+  color: whitesmoke;
+}
+
+.header>*{
+  margin : 20px;
+}
+
+
+#logo{
+  width: 100px;
+  height: 100px;
+
+  border-radius: 100%;
+}
+
+.login-btn-array{
+  text-align: center;
+}

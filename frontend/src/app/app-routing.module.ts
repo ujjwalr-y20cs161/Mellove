@@ -6,15 +6,31 @@ import { MainComponent } from './main/main.component';
 import { SearchComponent } from './search/search.component';
 import { PlayerComponent } from './player/player.component';
 import { AppComponent } from './app.component';
+import { MiniplayerComponent } from './miniplayer/miniplayer.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
 const routes: Routes = [
-  { path: '', component: MainComponent },
-  { path: 'search', component: SearchComponent }, 
-  { path: 'player', component: PlayerComponent },
-  { path: 'authent', component: AuthentComponent },
-  { path: '**', component: FallbackComponent }
+  { path: '', redirectTo: '/authent', pathMatch: 'full' },
+  { path: 'register', component: RegisterComponent },
+  {
+    path: 'main',
+    component: MainComponent,
+    children: [
+      { path: 'search', component: SearchComponent },
+      { path: '', component: PlayerComponent },
+    ]
+  },
+  {
+    path: 'authent',
+    component: AuthentComponent,
+    children: [
+      { path: 'main', redirectTo: 'main', pathMatch: "full" },
+      { path: 'register', redirectTo: 'register', pathMatch: 'full'}
+    ]
+  },
+  { path: '**', component: FallbackComponent },
 ];
 
 @NgModule({

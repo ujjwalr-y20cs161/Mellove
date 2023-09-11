@@ -1,1 +1,190 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Urbanist:wght@400;700;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Urbanist','Courier New', Courier, monospace;
+}
+
+:root{
+  --primary-btn : rgb(0, 255, 132);
+  --secondary-btn : rgb(242, 255, 0);
+  --background-grey : #DDDDDD;
+
+  --prim : cornflowerblue;
+  --prim-var-2 : #1530db;
+  --text-2: rgb(0, 0, 97);
+
+}
+
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.align-start{
+  align-items: flex-start;
+}
+
+.just-center {
+  justify-content: center;
+}
+
+.just-space-evenly {
+  justify-content: space-evenly;
+}
+
+.just-space-around {
+  justify-content: space-around;
+}
+
+.mar10{
+  margin: 10px;
+}
+
+.pad10{
+  padding: 10px;
+}
+
+.pad20{padding: 20px;}
+
+
+.child-mar10>*{
+  margin: 10px;
+}
+
+.child-pad10>*{
+  padding: 10px;
+}
+
+.child-mar5>* {
+  margin: 5px;
+}
+
+.child-pad5>* {
+  padding: 5px;
+}
+
+.child-mar15>* {
+  margin: 15px;
+}
+
+.child-pad15>* {
+  padding: 15px;
+}
+
+.border-10,.child-border-10>*{
+  border-radius: 10px;
+}
+
+.border-15 {
+  border-radius: 15px;
+}
+.border-20 {
+  border-radius: 20px;
+}
+
+.border-5 {
+  border-radius: 5px;
+}
+
+.round-border{
+  border-radius : 100%;
+}
+
+
+
+button{
+  border: none;
+}
+
+.wid40,.child-wid40>*{
+  width: 40vw;
+}
+.wid25,
+.child-wid25>* {
+  width: 25vw;
+}
+
+.wid20,.child-wid20>*{
+  width: 300px;
+}
+
+.btn-p-10-20{
+  padding: 10px 20px 10px 20px;
+}
+
+
+.prim-btn-col:enabled{
+    background: linear-gradient(to right, var(--prim), var(--prim-var-2));
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+}
+
+.prim-btn-col:hover, .sec-btn-col:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+
+
+.sec-btn-col {
+  background-image: linear-gradient(to right, rgb(209, 228, 0), rgb(255, 200, 0));
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+input, input:hover {
+  background-color: var(--background-grey);
+  border: none;
+  color: black;
+  outline: none;
+}
+
+textarea{
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(0, 29, 84, 0.5);
+}
+
+.font-8{
+  font-size: 8px;
+}
+
+.font-16{
+  font-size: 16px;
+}
+
+.font-20{
+  font-size: 20px;
+}
+
+.font-14{
+  font-size: 14px;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+a:focus {
+  outline: none;
+}
